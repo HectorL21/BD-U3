@@ -1,0 +1,23 @@
+crear funcion generar_rfc previa
+	Primeras dos letras del apellido paterno
+	Inicial del apellido materno (o 'X' si no tiene datos almacenados)
+	Primera letra del nombre
+	Año
+	mes
+	dia
+	ejemplo: Juan Perez Jolote 1975-11-23 --> PEJJ19751123
+
+	crear tabla personas:
+		id entero autoincrement llave primaria
+		nombre cadena not null
+		apellido_pat cadena not null
+		apellido_mat cadena null
+		fecha_nac fecha (date) --> 'yyyy-mm-dd'
+		clave_rfc cadena null
+
+	insertar 10 personas sin clave_rfc
+		(incluir un dato sin apellido materno)
+	crear UN PROCEDIMIENTO ALMACENADO QUE:
+		Lea toda la tabla persona, almacene los datos en un cursos y 
+		recorra fila por fila, actualizando el clave_rfc con la funcion creada
+		
